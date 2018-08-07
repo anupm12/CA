@@ -1,0 +1,15 @@
+{
+  "name": "ca",
+  "version": "1.0.0",
+  "description": "Website for chartered accountant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishnu,Anupam",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "node-sass": "^4.9.2"
+  }
+}
