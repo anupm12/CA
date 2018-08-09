@@ -1,0 +1,29 @@
+@import "variable";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500i,600');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    font-weight: 400;
+} 
+
+.navbar-c{
+    background:$primary-color;
+}
+
+.custom-ul li{
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    a{
+    color: $primary-color-2;
+} 
+}
+
+
+.hero-section {
+    background: #F3F3F3;
+}
+.hero-section-img-c {
+    background-size: cover;
+}
