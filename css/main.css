@@ -6332,3 +6332,17 @@ body {
 
 .hero-section-img-c {
   background-size: cover; }
+
+.norow {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.nocol {
+  padding-right: 0 !important; }
+
+.hero-section-text {
+  margin: 0 auto; }
+
+.img-c {
+  background-color: #000 !important;
+  opacity: .8 !important; }

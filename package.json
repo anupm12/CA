@@ -4,7 +4,7 @@
   "description": "Website for chartered accountant",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss scss/main.scss   css/main.css --watch"
+    "build-css": "node-sass --include-path scss scss/main.scss -r css/main.css --watch"
   },
   "author": "Vishnu,Anupam",
   "license": "MIT",
