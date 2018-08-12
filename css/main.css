@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500i,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -6313,22 +6313,96 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+* {
+  padding: 0;
+  margin: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #fff;
-  font-weight: 400; }
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #333; }
 
 .navbar-c {
-  background: #ededed; }
+  background: #ededed;
+  padding: 1.2rem !important;
+  font-size: 1.5rem !important; }
 
 .custom-ul li {
   text-transform: capitalize;
   letter-spacing: 1.5px; }
   .custom-ul li a {
-    color: #233142; }
+    color: #233142;
+    position: relative;
+    transition: all .2s; }
+    .custom-ul li a:before {
+      content: " ";
+      position: absolute;
+      left: 0%;
+      top: .2rem;
+      height: .2rem;
+      width: 0%;
+      background-color: #F73859;
+      transition: width 0.5s ease-in-out; }
+    .custom-ul li a:after {
+      content: " ";
+      position: absolute;
+      right: 0%;
+      bottom: .2rem;
+      height: .2rem;
+      width: 0%;
+      background-color: #F73859;
+      transition: width 0.5s ease-in-out; }
+    .custom-ul li a:hover, .custom-ul li a:focus {
+      background: -webkit-linear-gradient(45deg, #eb3349 0%, #f73859 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3349', endColorstr='#f73859',GradientType=1 );
+      /* IE6-9 fallback on horizontal gradient */ }
+      .custom-ul li a:hover:before, .custom-ul li a:focus:before {
+        width: 50%; }
+      .custom-ul li a:hover:after, .custom-ul li a:focus:after {
+        width: 50%; }
 
 .hero-section {
   background: #F3F3F3; }
+  .hero-section__text {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; }
+  .hero-section__img-c {
+    height: 70vh; }
+  .hero-section__social {
+    list-style: none; }
+  .hero-section__social-list {
+    display: inline;
+    margin-right: 2rem; }
+  .hero-section__social-link {
+    text-decoration: none !important; }
+  .hero-section__social-icon {
+    width: 2.25rem;
+    height: 2.75rem;
+    fill: #233142;
+    stroke: #F73859;
+    stroke-width: 1px;
+    stroke-dasharray: 125;
+    stroke-dashoffset: -125;
+    stroke-linecap: butt;
+    transition: all 2s ease-out; }
+  .hero-section__social-icon:hover {
+    fill: #ededed;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 125; }
 
 .hero-section-img-c {
   background-size: cover; }
@@ -6339,10 +6413,3 @@ body {
 
 .nocol {
   padding-right: 0 !important; }
-
-.hero-section-text {
-  margin: 0 auto; }
-
-.img-c {
-  background-color: #000 !important;
-  opacity: .8 !important; }
